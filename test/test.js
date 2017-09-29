@@ -66,3 +66,20 @@ describe("Getty api call", function() {
     
     
 }); 
+
+describe("Getty api call errors", function() {
+    
+    it("should return without errors!", function(done) {
+        
+        getty.makeApiRequest(function(error, imgURI) {
+            //console.log("tweets: " + tweets.length); 
+            console.log("imageURI: " + imgURI); 
+            
+            expect(error).to.be.a('null'); 
+            done(); 
+        });
+    }); 
+    
+    
+    
+});
